@@ -3,6 +3,20 @@ My personal mtkclient wrapper for getting bootloader or kernel logs from a media
 
 This script extracts `expdb` partition/`pstore` memory region and extracts ASCII strings from them.
 
+## Installing
+This project has to be cloned with `--recurse-submodules` in order to fetch the [mtkclient](https://github.com/bkerler/mtkclient) repo
+```shell
+git clone https://github.com/chkndrp/mtk-log-util --recurse-submodules
+```
+
+There are basically no python requirements besides the ones coming from [mtkclient](https://github.com/bkerler/mtkclient/blob/main/requirements.txt)
+```shell
+# requirements.txt is a symlink to mtkclient/...
+pip install -r requirements.txt
+```
+
+If you haven't already, i recommend following the [mtkclient setup instructions](https://github.com/bkerler/mtkclient/blob/main/README-INSTALL.md) first, otherwise you won't get far with this project
+
 ## Usage
 ```
 mtk-log-util - mtkclient wrapper for getting bootloader or kernel logs from a mediatek device
@@ -40,4 +54,6 @@ and might result in the first half of the data being corrupted if enabled.
 
 ## Requirements
 - Python 3.10 or newer
-- Cloning with `--recurse-submodules` to fetch `mtkclient` repo
+- Cloning with `--recurse-submodules` to fetch [mtkclient](https://github.com/bkerler/mtkclient) repo
+- Installed [mtkclient requirements](https://github.com/bkerler/mtkclient/blob/main/requirements.txt) 
+and followed the [setup instructions](https://github.com/bkerler/mtkclient/blob/main/README-INSTALL.md)
