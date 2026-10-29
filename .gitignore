@@ -1,0 +1,9 @@
+*
+
+!*.py
+!.*
+!.*/**
+
+!LICENSE
+!requirements.txt
+!README.md
